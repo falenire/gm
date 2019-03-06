@@ -13,20 +13,22 @@ util.inherits(gm, EventEmitter);
  * Constructor.
  *
  * @param {String|Number} path - path to img source or ReadableStream or width of img to create
+ * @param {String} gpath - path to the real gm binary, it can be null, added by fabian@fnino.com, Thanks to HC1988 github.com/aheckmann/gm/issues/603
  * @param {Number} [height] - optional filename of ReadableStream or height of img to create
  * @param {String} [color] - optional hex background color of created img
  */
 
-function gm (source, height, color) {
+function gm (source, gpath, height, color) {
   var width;
 
   if (!(this instanceof gm)) {
-    return new gm(source, height, color);
+    return new gm(source, gpath, height, color);
   }
 
   EventEmitter.call(this);
 
   this._options = {};
+  if(gpath) this._options.gpath = gpath
   this.options(this.__proto__._options);
 
   this.data = {};
