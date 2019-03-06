@@ -1,3 +1,10 @@
+## Note:
+
+This is a fork of [aheckmann/gm](https://github.com/aheckmann/gm) v 1.23.1.<br><br>
+Fork was made to include recommendation from [node-webkit add a param gpath? #603](https://github.com/aheckmann/gm/issues/603).<br><br>
+
+All credit goes to [aheckmann](https://github.com/aheckmann) and to [HC](https://github.com/HC1988) who provided the comment to include path to the Graphicsmagick binary for npm gn so that it could be packaged inside an Electron App.
+
 
 # gm [![Build Status](https://travis-ci.org/aheckmann/gm.png?branch=master)](https://travis-ci.org/aheckmann/gm)  [![NPM Version](https://img.shields.io/npm/v/gm.svg?style=flat)](https://www.npmjs.org/package/gm)
 
